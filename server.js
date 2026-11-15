@@ -11,6 +11,8 @@ import database from "./config/connexion.js";
 // 2. Routes 
  import roleRoute from "./routes/roleRoute.js";
  import utilisateurRoute from "./routes/utilisateurRoute.js";
+ import magasinRoute from "./routes/magasinRoute.js";
+ import murRoute from "./routes/murRoute.js";
 
 configDotenv();
 
@@ -33,6 +35,8 @@ try {
 // 4. Déclaration des routes de l'API 
  app.use("/api/roles", roleRoute);
  app.use("/api/utilisateurs", utilisateurRoute);
+ app.use("/api/magasins", magasinRoute);
+ app.use("/api/murs", murRoute);
 
 const PORT = process.env.PORT || 5000;
 
