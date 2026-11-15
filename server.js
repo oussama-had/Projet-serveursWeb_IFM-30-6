@@ -13,6 +13,8 @@ import database from "./config/connexion.js";
  import utilisateurRoute from "./routes/utilisateurRoute.js";
  import magasinRoute from "./routes/magasinRoute.js";
  import murRoute from "./routes/murRoute.js";
+ import produitRoute from "./routes/produitRoute.js";
+ import materielRoute from "./routes/materielRoute.js";
 
 configDotenv();
 
@@ -37,7 +39,9 @@ try {
  app.use("/api/utilisateurs", utilisateurRoute);
  app.use("/api/magasins", magasinRoute);
  app.use("/api/murs", murRoute);
-
+ app.use("/api/produits", produitRoute);
+ app.use("/api/materiels", materielRoute);
+ 
 const PORT = process.env.PORT || 5000;
 
 app.listen(PORT, () => console.log(`Le serveur tourne sur le port ${PORT}`));
